@@ -15,13 +15,37 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Confetti App</title>
-  </head>
-  <body>
-    <h1>🎉🎉🎉 老妈，母亲节快乐 🎉🎉🎉</h1>
-    <button id="fire-btn">点这里有惊喜！！！</button>
-    <!-- 引入模块化脚本 -->
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>Canvas Confetti Demo</title>
+  <style>
+    body {
+      text-align: center;
+      margin-top: 100px;
+      font-family: sans-serif;
+    }
+
+    button {
+      font-size: 24px;
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 欢迎使用 Canvas Confetti</h1>
+  <button onclick="fireConfetti()">点我放烟花！</button>
+
+  <!-- 引入 canvas-confetti 的 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    function fireConfetti() {
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+    }
+  </script>
+</body>
 </html>
+
